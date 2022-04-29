@@ -33,7 +33,7 @@ define Device/arcadyan_arv4519pw
 endef
 TARGET_DEVICES += arcadyan_arv4519pw
 
-define Device/arcadyan_arv7506pw11
+define Device/arcadyan_arv4519pw1
   DEVICE_VENDOR := Arcadyan
   DEVICE_MODEL := ARV4519PW1
   DEVICE_ALT0_VENDOR := Airties
