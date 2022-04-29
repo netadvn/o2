@@ -35,6 +35,21 @@ TARGET_DEVICES += arcadyan_arv4519pw
 
 define Device/arcadyan_arv7506pw11
   DEVICE_VENDOR := Arcadyan
+  DEVICE_MODEL := ARV4519PW1
+  DEVICE_ALT0_VENDOR := Airties
+  DEVICE_ALT0_MODEL := Air6271
+  IMAGE_SIZE := 7808k
+  SOC := danube
+  DEVICE_PACKAGES := kmod-ltq-adsl-danube-mei kmod-ltq-adsl-danube \
+	kmod-ltq-adsl-danube-fw-b kmod-ltq-atm-danube \
+	ltq-adsl-app ppp-mod-pppoa \
+	kmod-rt2800-pci kmod-ath5k wpad-basic-wolfssl
+  SUPPORTED_DEVICES += ARV4519PW1
+endef
+TARGET_DEVICES += arcadyan_arv4519pw1
+
+define Device/arcadyan_arv7506pw11
+  DEVICE_VENDOR := Arcadyan
   DEVICE_MODEL := ARV7506PW11
   DEVICE_ALT0_VENDOR := Alice/O2
   DEVICE_ALT0_MODEL := IAD 4421
