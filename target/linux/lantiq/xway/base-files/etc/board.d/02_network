@@ -12,12 +12,12 @@ lantiq_setup_interfaces()
 	local board="$1"
 
 	case "$board" in
+	arcadyan,arv4519pw1|\
 	arcadyan,arv4510pw)
 		ucidef_add_switch "switch0" \
 			"0:lan:4" "2:lan:2" "1:lan:3" "3:lan:1" "5t@eth0"
 		;;
 	arcadyan,arv4519pw|\
-	arcadyan,arv4519pw1|\
 	arcadyan,arv7510pw22|\
 	arcadyan,arv7518pw|\
 	arcadyan,arv752dpw22|\
