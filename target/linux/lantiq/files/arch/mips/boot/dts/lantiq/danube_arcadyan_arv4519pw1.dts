@@ -32,7 +32,7 @@
 
 		rfkill {
 			label = "rfkill";
-			gpios = <&gpio 11 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 28 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_RFKILL>;
 		};
 		reset {
@@ -148,5 +148,4 @@
 
 	lantiq,external-clock;
 	gpio-reset = <&gpio 21 GPIO_ACTIVE_HIGH>;
-	};
 };
