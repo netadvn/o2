@@ -146,25 +146,25 @@
 			#size-cells = <1>;
 
 			partition@0 {
-				label = "uboot";
-				reg = <0x00000 0x40000>; /* ??? 256 KB */
+				label = "UBoot";
+				reg = <0x00000 0x10000>; /* Factory UBoot */
 				read-only;
 			};
 
 			partition@10000 {
-				label = "u-boot-env";
-				reg = <0x40000 0x10000>; /* 64 KB */
+				label = "Config&ASD";
+				reg = <0x10000 0x20000>; /* Stock Firmware's Configuration Partitions (not used by openwrt) */
 				read-only;
 			};
 
-			partition@20000 {
+			partition@30000 {
 				label = "firmware";
-				reg = <0x50000 0x7a0000>;
+				reg = <0x30000 0x7c0000>;
 			};
 
-			boardconfig: partition@3f0000 {
+			boardconfig: partition@7f0000 {
 				label = "boardconfig";
-				reg = <0x7a0000 0x10000>;
+				reg = <0x7f0000 0x10000>;
 				read-only;
 			};
 		};
