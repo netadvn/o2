@@ -190,6 +190,14 @@
 
 	gpio-reset = <&gpio 21 GPIO_ACTIVE_HIGH>;
 	req-mask = <0xf>;
+	
+	wifi@168c,001d {
+		compatible = "pci168c,001d";
+		reg = <0x7000 0 0 0 0>;
+		qca,no-eeprom; /* load from ath9k-eeprom-pci-0000:00:0e.0.bin */
+		mtd-mac-address = <&boardconfig 0x16>;
+		mtd-mac-address-increment = <1>;
+	};
 };
 
 &usb_phy {
